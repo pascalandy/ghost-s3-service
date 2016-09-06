@@ -1,6 +1,6 @@
 {
   "name": "ghost-s3-service",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Store Ghost's images on S3 and proxy requests for local images to S3.",
   "main": "index.js",
   "scripts": {
@@ -30,5 +30,5 @@
     "aws-sdk": "^2.1.6",
     "aws-sdk-promise": "^0.0.2",
     "bluebird": "^2.10.2"
-    }
+  }
 }
