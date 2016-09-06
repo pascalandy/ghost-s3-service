@@ -14,7 +14,7 @@ You will need to have a the custom storage module directly in your project
 directory, the easiest way to do this is:
 
 ```bash
-$ npm install ghost-s3
+$ npm install ghost-s3-service
 $ mkdir content/storage/ghost-s3
 ```
 
