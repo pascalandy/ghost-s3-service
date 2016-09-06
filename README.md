@@ -1,4 +1,5 @@
-# Ghost S3 Storage, compatability mode
+# Ghost S3 Service
+Supported Ghost Version v0.10.0
 
 This module allows you to read and write images from Amazon S3 instead of
 storing them locally.
@@ -13,9 +14,15 @@ You will need to have a the custom storage module directly in your project
 directory, the easiest way to do this is:
 
 ```bash
-$ npm install ghost-s3-compat
-$ mkdir content/storage
-$ cp -r node_modules/ghost-s3-compat content/storage/ghost-s3-compat
+$ npm install ghost-s3
+$ mkdir content/storage/ghost-s3
+```
+
+Then create a file called `index.js` and insert the following code
+
+```
+'use strict';
+module.exports = require('ghost-s3-service');
 ```
 
 ## Configuration
@@ -37,9 +44,7 @@ In `config.js`, add a `storage` block for each environment.
     },
 ```
 
-
 ### Asset host
-
 You can add `assetHost` to your config to specify a virtual host url. This is
 most frequently used with a content delivery network (CDN) such as CloudFront,
 CloudFlare, or others. The modified `storage` block would be:
@@ -61,9 +66,5 @@ You can add `assetHost` to your config to specify a virtual host url. For more
 information, [read this section](http://docs.aws.amazon.com/AmazonS3/latest/dev/VirtualHosting.html)
 in the AWS docs.
 
-## Copyright & License
-
-- Original work Copyright (c) 2015 Hoang Pham Huu <phamhuuhoang@gmail.com>
-- Modified work Copyright (c) 2016 Curiosity Media, Inc.
-
-Released under the [MIT license](https://github.com/spanishdict/ghost-s3-compat/blob/master/LICENSE).
+## Credits
+Huge thanks to [muzix](https://github.com/muzix/ghost-s3) for the original storage adapter and [spanishdict](https://github.com/spanishdict/ghost-s3-compat) for the latest updates. This adapter is a fork of spanishdict's project for the purposes of staying up to date with the latest Ghost versions and attempts to maintian active support. It currently has the latest pull request from [acburdine](https://github.com/spanishdict/ghost-s3-compat/pull/11).
