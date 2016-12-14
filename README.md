@@ -1,5 +1,9 @@
-# Ghost S3 Service
-Supported Ghost Version v0.10.0
+## About this fork
+
+Not maintained here. Used as a backup  only. See https://github.com/kelyvin/ghost-s3-service/issues/1#issuecomment-254424540 for more info and the latest code updates.
+
+## Ghost S3 Service
+Supported Ghost Version >= v0.10.0
 
 This module allows you to read and write images from Amazon S3 instead of
 storing them locally.
